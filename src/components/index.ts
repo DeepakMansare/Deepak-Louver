@@ -1,4 +1,5 @@
 export * from "./Hero";
+export * from "./Navbar";
 export * from "./About";
 export * from "./Facilities";
 export * from "./OtherFeatures";
