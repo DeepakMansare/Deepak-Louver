@@ -9,7 +9,7 @@ import {
   Footer,
 } from "@components";
 
-const Home = () => {
+export const Home = () => {
   return (
     <div>
       <Hero />
@@ -23,4 +23,3 @@ const Home = () => {
     </div>
   );
 };
-export default Home;
