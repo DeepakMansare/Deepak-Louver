@@ -5,9 +5,11 @@ import { useState } from "react";
 import { smallImg1, smallImg2, smallImg3, smallImg4 } from "@assets";
 
 export const Hero = () => {
-  const [open, setOpen] = useState(false);
-  const navItems = ["About Us", "Facilities", "Membership"];
-  const descriptionLines = [
+  const [open, setOpen] = useState<boolean>(false);
+
+  const navItems: string[] = ["About Us", "Facilities", "Membership"];
+
+  const descriptionLines: string[] = [
     "We’re committed to delivering a high",
     "quality experience in a welcoming and",
     "supportive atmosphere",
