@@ -1,4 +1,5 @@
 import { Search, Menu, ArrowUpRight } from "lucide-react";
+
 import { useState } from "react";
 
 import { smallImg1, smallImg2, smallImg3, smallImg4 } from "@assets";
