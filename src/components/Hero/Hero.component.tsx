@@ -1,14 +1,17 @@
-import { Search, Menu, ArrowUpRight } from "lucide-react";
-
-import { useState } from "react";
+import { Search } from "lucide-react";
 
 import { smallImg1, smallImg2, smallImg3, smallImg4 } from "@assets";
+import { Navbar } from "@components";
 
-export const Hero = () => {
-  const [open, setOpen] = useState<boolean>(false);
-
-  const navItems: string[] = ["About Us", "Facilities", "Membership"];
-
+export const Hero = ({
+  search,
+  setSearch,
+  setActiveSection,
+}: {
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+  setActiveSection: React.Dispatch<React.SetStateAction<string | null>>;
+}) => {
   const descriptionLines: string[] = [
     "We’re committed to delivering a high",
     "quality experience in a welcoming and",
@@ -16,63 +19,25 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen font-roboto flex flex-col bg-cover bg-center bg-no-repeat text-white bg-[url('/HeroImgMobile.png')] md:bg-[url('/HeroImgDesktop.png')] px-3 py-4 md:px-4 md:py-3 overflow-auto">
-      <nav className="w-full flex items-center justify-between py-6">
-        <div className="flex items-center gap-2 text-xl tracking-widest font-hind">
-          <span className="font-semibold">LOUVER</span>
-          <span>SPORT</span>
-        </div>
-
-        <div className="flex items-center gap-4 ml-auto min-w-0 md:w-full">
-          <div className="hidden md:flex items-center gap-6 w-full ml-auto justify-end font-light">
-            <div className="flex items-center justify-between backdrop-blur-sm px-4 py-5 rounded-full flex-1 w-full max-w-sm">
-              <ul className="flex items-center gap-8 text-sm whitespace-nowrap mx-auto">
-                {navItems.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex items-center justify-between backdrop-blur-sm px-4 py-2 rounded-full border flex-1 w-full max-w-52 gap-1">
-              <span className="text-sm">Search here...</span>
-              <div className="h-10 w-10 flex items-center justify-center bg-white text-gray-300 border rounded-full shrink-0">
-                <Search size={20} />
-              </div>
-            </div>
-
-            <button className="px-4 py-6 text-sm rounded-full bg-gray-800 whitespace-nowrap flex items-center gap-1 md:px-3 md:py-4">
-              Book now
-              <ArrowUpRight size={16} />
-            </button>
-          </div>
-
-          <div className="h-14 w-14 border backdrop-blur-sm flex items-center justify-center rounded-full md:hidden">
-            <button onClick={() => setOpen(!open)} aria-label="Toggle menu">
-              <Menu size={26} />
-            </button>
-          </div>
-        </div>
-
-        {open && (
-          <div className="fixed top-24 right-4 z-50 w-32 bg-white text-black rounded-lg shadow-lg md:hidden">
-            <ul className="flex flex-col text-sm">
-              {["About Us", "Facilities", "Membership"].map((item) => (
-                <li
-                  key={item}
-                  onClick={() => setOpen(false)}
-                  className="px-4 py-2 hover:bg-black hover:text-white cursor-pointer"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </nav>
+    <section className="min-h-screen font-roboto flex flex-col bg-cover bg-center bg-no-repeat text-white bg-[url('/HeroImgMobile.png')] md:bg-[url('/HeroImgDesktop.png')] px-3 py-4 md:px-4 md:py-3">
+      <Navbar
+        search={search}
+        setSearch={setSearch}
+        setActiveSection={setActiveSection}
+      />
 
       <div className="w-full max-w-md mx-auto h-16 flex items-center justify-between gap-3 backdrop-blur-sm p-2 rounded-full border md:hidden md:gap-2">
-        <span className="pl-3">Search here...</span>
-        <div className="h-12 w-12 flex items-center justify-center bg-white text-gray-300 border rounded-full shrink-0">
+        <input
+          type="text"
+          value={search}
+          placeholder="Search here..."
+          onChange={(e) => setSearch(e.target.value)}
+          className="bg-transparent text-sm outline-none pl-3 w-full"
+        />
+        <div
+          className="h-12 w-12 flex items-center justify-center bg-white text-gray-300 border rounded-full shrink-0 cursor-pointer"
+          onClick={() => console.log(search)}
+        >
           <Search size={28} />
         </div>
       </div>
@@ -87,7 +52,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="inline-flex self-start px-3 py-2 border text-sm rounded-full mt-12 md:-mt-1 md:px-3 md:py-3">
+      <div className="inline-flex self-start px-3 py-2 border text-sm rounded-full mt-12 md:-mt-1 md:py-3">
         <button>Sport Center</button>
       </div>
 

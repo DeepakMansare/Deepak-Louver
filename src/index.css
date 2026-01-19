@@ -1,3 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+.font-hind {
+  font-family: "Hind Kochi", sans-serif;
+}
+
+.font-roboto {
+  font-family: Roboto, sans-serif;
+}
