@@ -11,23 +11,7 @@ import {
 
 import { useState } from "react";
 
-type SectionKey =
-  | "hero"
-  | "about"
-  | "facilities"
-  | "otherFeatures"
-  | "membership"
-  | "testimonials"
-  | "newsletter"
-  | "footer";
-
-type SectionInfo = {
-  id: SectionKey;
-  Component: React.ComponentType<any>;
-};
-
-const SECTIONS: SectionInfo[] = [
-  { id: "hero", Component: Hero },
+const SECTIONS = [
   { id: "about", Component: About },
   { id: "facilities", Component: Facilities },
   { id: "otherFeatures", Component: OtherFeatures },
@@ -38,11 +22,26 @@ const SECTIONS: SectionInfo[] = [
 ];
 
 export const Home = () => {
-  const [search, setSearch] = useState("");
-  const [activeSection, setActiveSection] = useState<SectionKey | null>(null);
+  const [search, setSearch] = useState<string>("");
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
   return (
     <div className="flex flex-col space-y-3 md:space-y-20">
+      <section
+        id="hero"
+        className={
+          activeSection === "hero"
+            ? "bg-gray-100 transition-colors duration-500"
+            : ""
+        }
+      >
+        <Hero
+          search={search}
+          setSearch={setSearch}
+          setActiveSection={setActiveSection}
+        />
+      </section>
+
       {SECTIONS.map(({ id, Component }) => (
         <section
           key={id}
@@ -53,15 +52,7 @@ export const Home = () => {
               : ""
           }
         >
-          {id === "hero" ? (
-            <Component
-              search={search}
-              setSearch={setSearch}
-              setActiveSection={setActiveSection}
-            />
-          ) : (
-            <Component />
-          )}
+          <Component />
         </section>
       ))}
     </div>

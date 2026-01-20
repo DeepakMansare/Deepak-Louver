@@ -1,6 +1,12 @@
 import { Search, Menu, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 
+const navItems: { label: string; target: string }[] = [
+  { label: "About Us", target: "about" },
+  { label: "Facilities", target: "facilities" },
+  { label: "Membership", target: "membership" },
+];
+
 export const Navbar = ({
   search,
   setSearch,
@@ -11,12 +17,6 @@ export const Navbar = ({
   setActiveSection: React.Dispatch<React.SetStateAction<string | null>>;
 }) => {
   const [open, setOpen] = useState<boolean>(false);
-
-  const navItems: { label: string; target: string }[] = [
-    { label: "About Us", target: "about" },
-    { label: "Facilities", target: "facilities" },
-    { label: "Membership", target: "membership" },
-  ];
 
   const handleScroll = (target: string) => {
     setActiveSection(target);

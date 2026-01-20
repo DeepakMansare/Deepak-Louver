@@ -3,6 +3,14 @@ import { Search } from "lucide-react";
 import { smallImg1, smallImg2, smallImg3, smallImg4 } from "@assets";
 import { Navbar } from "@components";
 
+const descriptionLines: string[] = [
+  "We’re committed to delivering a high",
+  "quality experience in a welcoming and",
+  "supportive atmosphere",
+];
+
+const targetImg = [smallImg1, smallImg2, smallImg3, smallImg4];
+
 export const Hero = ({
   search,
   setSearch,
@@ -12,12 +20,6 @@ export const Hero = ({
   setSearch: React.Dispatch<React.SetStateAction<string>>;
   setActiveSection: React.Dispatch<React.SetStateAction<string | null>>;
 }) => {
-  const descriptionLines: string[] = [
-    "We’re committed to delivering a high",
-    "quality experience in a welcoming and",
-    "supportive atmosphere",
-  ];
-
   return (
     <section className="min-h-screen font-roboto flex flex-col bg-cover bg-center bg-no-repeat text-white bg-[url('/HeroImgMobile.png')] md:bg-[url('/HeroImgDesktop.png')] px-3 py-4 md:px-4 md:py-3">
       <Navbar
@@ -64,7 +66,7 @@ export const Hero = ({
 
       <div className="flex flex-col items-end gap-4 mt-9 md:mt-5">
         <div className="flex items-center border border-blue-600 rounded-full -space-x-3 px-2 py-1 md:px-4 md:py-2">
-          {[smallImg1, smallImg2, smallImg3, smallImg4].map((img, i) => (
+          {targetImg.map((img, i) => (
             <img
               key={i}
               src={img}
