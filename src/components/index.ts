@@ -1,5 +1,4 @@
 export * from "./Hero";
-export * from "./Navbar";
 export * from "./About";
 export * from "./Facilities";
 export * from "./OtherFeatures";
@@ -7,3 +6,4 @@ export * from "./ContactForm";
 export * from "./Testimonials";
 export * from "./Newsletter";
 export * from "./Footer";
+export * from "./Navbar";
