@@ -3,14 +3,13 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 export const About = () => {
   return (
     <section className="mt-4 py-6 px-3 font-roboto space-y-7 md:flex md:flex-row md:items-stretch md:justify-center md:space-x-6 md:space-y-0 md:px-7 md:py-8 md:mt-16">
-      {/* 1st card */}
-      <div className="flex flex-col justify-between gap-6 w-full min-h-88 font-roboto md:flex-1 md:min-h-88">
+      <div className="flex flex-col justify-between gap-6 w-full font-roboto md:flex-1">
         <button className="inline-flex self-start items-center gap-2 whitespace-nowrap px-3 py-2 border border-gray-300 rounded-full text-sm md:py-4 md:px-4 md:text-xs">
           About Louver
         </button>
 
         <p className="flex items-center justify-center text-3xl font-thin md:text-2xl">
-          At Louvre sport center,we’re passionate about providing a top-notch
+          At Louvre sport center, we’re passionate about providing a top-notch
           environment for athletes of all levels.
         </p>
 
@@ -20,8 +19,7 @@ export const About = () => {
         </button>
       </div>
 
-      {/* 2nd card */}
-      <div className="flex flex-col justify-between bg-[url('/AboutImg1.png')] bg-cover bg-center min-h-72 rounded-xl text-white p-6 md:flex-1 md:min-h-88">
+      <div className="flex flex-col justify-between bg-[url('/AboutImg1.png')] bg-cover bg-center min-h-72 rounded-3xl text-white p-6 md:flex-1">
         <button className="self-start border backdrop-blur-sm px-4 py-2 rounded-3xl text-xs font-thin">
           Indoor Area
         </button>
@@ -35,9 +33,8 @@ export const About = () => {
         </div>
       </div>
 
-      {/* 3rd card */}
-      <div className=" md:flex-1 flex flex-col justify-between md:min-h-88">
-        <div className="flex flex-col justify-between bg-[url('/AboutImg2.png')] bg-cover bg-center min-h-48 text-white p-6 md:rounded-xl">
+      <div className="md:flex-1 flex flex-col justify-between">
+        <div className="flex flex-col justify-between bg-[url('/AboutImg2.png')] rounded-3xl bg-cover bg-center min-h-48 text-white p-6 md:rounded-xl">
           <button className="self-start border backdrop-blur-sm px-2 py-1 rounded-3xl text-xs">
             Outdoor Area
           </button>
