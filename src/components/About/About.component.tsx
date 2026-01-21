@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 
 export const About = () => {
   return (
-    <section className="mt-4 py-6 px-3 font-roboto space-y-7 md:flex md:flex-row md:items-stretch md:justify-center md:space-x-6 md:space-y-0 md:px-7 md:py-8 md:mt-16">
+    <section className="mt-4 py-6 px-3 font-roboto space-y-7 md:flex md:flex-row md:items-stretch md:justify-center md:space-x-6 md:space-y-0 md:px-7 md:py-4">
       <div className="flex flex-col justify-between gap-6 w-full font-roboto md:flex-1">
         <button className="inline-flex self-start items-center gap-2 whitespace-nowrap px-3 py-2 border border-gray-300 rounded-full text-sm md:py-4 md:px-4 md:text-xs">
           About Louver
