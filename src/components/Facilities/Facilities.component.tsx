@@ -43,7 +43,7 @@ export const Facilities = () => {
         {facilities.map((item) => (
           <div
             key={item.buttonTxt}
-            className="flex flex-col items-start justify-between border aspect-[3/4.7] w-72 md:w-1/4 shrink-0 px-2 py-3 bg-cover bg-center rounded-2xl text-white md:mx-auto"
+            className="flex flex-col items-start justify-between border aspect-[3/4.7] w-72 md:w-1/4 shrink-0 px-2 py-3 bg-cover bg-center rounded-2xl text-white"
             style={{ backgroundImage: `url(${item.img})` }}
           >
             <button className="px-3 py-2 border rounded-3xl text-sm">
