@@ -4,7 +4,8 @@
     "paths": {
       "@components": ["components/index.ts"],
       "@pages": ["pages/index.ts"],
-      "@assets": ["assets/index.ts"]
+      "@assets": ["assets/index.ts"],
+      "@mockdata": ["mockdata/index.ts"]
     },
 
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",

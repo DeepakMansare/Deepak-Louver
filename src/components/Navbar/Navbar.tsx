@@ -1,11 +1,6 @@
 import { Search, Menu, ArrowUpRight } from "lucide-react";
+import { navItems } from "@mockdata";
 import { useState } from "react";
-
-const navItems: { label: string; target: string }[] = [
-  { label: "About Us", target: "about" },
-  { label: "Facilities", target: "facilities" },
-  { label: "Membership", target: "membership" },
-];
 
 export const Navbar = ({
   search,

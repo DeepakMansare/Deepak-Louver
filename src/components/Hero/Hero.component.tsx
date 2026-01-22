@@ -2,12 +2,7 @@ import { Search } from "lucide-react";
 
 import { smallImg1, smallImg2, smallImg3, smallImg4 } from "@assets";
 import { Navbar } from "@components";
-
-const descriptionLines: string[] = [
-  "We’re committed to delivering a high",
-  "quality experience in a welcoming and",
-  "supportive atmosphere",
-];
+import { descriptionLines } from "@mockdata";
 
 const targetImg = [smallImg1, smallImg2, smallImg3, smallImg4];
 

@@ -1,6 +1,11 @@
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+
+import { aboutSlides } from "@mockdata";
 
 export const About = () => {
+  const [index, setIndex] = useState<number>(0);
+
   return (
     <section className="mt-4 py-6 px-3 font-roboto space-y-7 md:flex md:flex-row md:items-stretch md:justify-center md:space-x-6 md:space-y-0 md:px-7 md:py-4">
       <div className="flex flex-col justify-between gap-6 w-full font-roboto md:flex-1">
@@ -13,7 +18,7 @@ export const About = () => {
           environment for athletes of all levels.
         </p>
 
-        <button className="inline-flex self-start items-center px-3 py-3 border rounded-full whitespace-nowrap gap-2 bg-black/80 text-white text-sm">
+        <button className="inline-flex self-start items-center px-3 py-3 border rounded-full whitespace-nowrap gap-2 bg-black/80 text-white text-sm cursor-pointer">
           Get in Touch
           <ArrowUpRight size={20} />
         </button>
@@ -49,18 +54,26 @@ export const About = () => {
         </div>
 
         <div className="flex flex-row justify-between py-6 space-x-5 text-gray-500">
-          <p>
-            Discover your new - favourite place - to play, train, and compete.
-          </p>
+          <p>{aboutSlides[index]}</p>
 
           <div className="flex flex-row justify-between gap-2 text-sm">
             <ArrowLeft
               size={8}
-              className="h-10 w-10 border border-gray-300 backdrop-blur-sm rounded-full p-2"
+              className="h-10 w-10 border border-gray-300 backdrop-blur-sm rounded-full p-2 cursor-pointer"
+              onClick={() =>
+                setIndex(
+                  (prev) =>
+                    (prev - 1 + aboutSlides.length) % aboutSlides.length,
+                )
+              }
             />
+
             <ArrowRight
               size={8}
-              className="h-10 w-10 border border-gray-300 backdrop-blur-sm rounded-full p-2"
+              className="h-10 w-10 border border-gray-300 backdrop-blur-sm rounded-full p-2 cursor-pointer"
+              onClick={() =>
+                setIndex((prev) => (prev + 1) % aboutSlides.length)
+              }
             />
           </div>
         </div>
