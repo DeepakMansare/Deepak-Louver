@@ -1,6 +1,7 @@
 import { Search, Menu, ArrowUpRight } from "lucide-react";
-import { navItems } from "@mockdata";
 import { useState } from "react";
+
+import { navItems } from "@mockdata";
 
 export const Navbar = ({
   search,
