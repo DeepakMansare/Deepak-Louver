@@ -1,4 +1,5 @@
 import { ArrowUpRight, ArrowRight, ArrowLeft } from "lucide-react";
+import { useState } from "react";
 
 export const Facilities = () => {
   const facilities = [
@@ -24,6 +25,14 @@ export const Facilities = () => {
     },
   ];
 
+  const facilitiesNotes = [
+    "Book a court for focused practice, team drills, or private coaching, and take your game to the next level.",
+    "Train smarter with courts designed for performance, skill growth, and consistency.",
+    "Perfect spaces for team drills, coaching sessions, and competitive preparation.",
+  ];
+
+  const [index, setIndex] = useState<number>(0);
+
   return (
     <section className="font-roboto px-3 space-y-9 md:px-7">
       <div className="flex flex-col space-y-6 md:flex-row md:items-center md:justify-between md:space-y-0">
@@ -43,7 +52,7 @@ export const Facilities = () => {
         {facilities.map((item) => (
           <div
             key={item.buttonTxt}
-            className="flex flex-col items-start justify-between border aspect-[3/4.7] w-72 md:w-1/4 shrink-0 px-2 py-3 bg-cover bg-center rounded-2xl text-white"
+            className="flex flex-col items-start justify-between border aspect-[3/4.7] w-80 md:w-1/4 shrink-0 px-2 py-3 bg-cover bg-center rounded-2xl text-white"
             style={{ backgroundImage: `url(${item.img})` }}
           >
             <button className="px-3 py-2 border rounded-3xl text-sm">
@@ -62,15 +71,30 @@ export const Facilities = () => {
 
       <div className="flex flex-col justify-center space-y-3 md:flex-row-reverse md:items-center md:justify-between md:space-y-0">
         <p className="text-sm font-thin text-right ml-auto max-w-96 md:text-base text-gray-600">
-          Book a court for focused practice, Team drills, or private coaching,
-          and take your game to the next level
+          {facilitiesNotes[index]}
         </p>
         <div className="flex items-center justify-end space-x-3">
           <span className="h-14 w-14 rounded-full border border-gray-300 flex items-center justify-center">
-            <ArrowLeft size={24} strokeWidth={1} />
+            <ArrowLeft
+              size={24}
+              strokeWidth={1}
+              onClick={() =>
+                setIndex(
+                  (prev) =>
+                    (prev - 1 + facilitiesNotes.length) %
+                    facilitiesNotes.length,
+                )
+              }
+            />
           </span>
           <span className="h-14 w-14 rounded-full border border-gray-300 flex items-center justify-center ">
-            <ArrowRight size={24} strokeWidth={1} />
+            <ArrowRight
+              size={24}
+              strokeWidth={1}
+              onClick={() =>
+                setIndex((prev) => (prev + 1) % facilitiesNotes.length)
+              }
+            />
           </span>
         </div>
       </div>
