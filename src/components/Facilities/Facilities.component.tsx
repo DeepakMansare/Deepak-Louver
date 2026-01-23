@@ -55,7 +55,7 @@ export const Facilities = () => {
             className="flex flex-col items-start justify-between border aspect-[3/4.7] w-80 md:w-1/4 shrink-0 md:shrink px-2 py-3 bg-cover bg-center rounded-2xl text-white"
             style={{ backgroundImage: `url(${item.img})` }}
           >
-            <button className="px-3 py-2 border rounded-3xl text-sm">
+            <button className="px-3 py-2 md:px-4 md:py-3 border rounded-3xl text-sm">
               {item.buttonTxt}
             </button>
 
