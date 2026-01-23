@@ -60,7 +60,7 @@ export const Facilities = () => {
             </button>
 
             <div className="flex items-center justify-between bg-white/20 backdrop-blur-sm px-5 py-6 rounded-2xl font-thin text-sm text-white space-x-1 md:w-full">
-              <p>{item.desc}</p>
+              <p className="md:text-lg">{item.desc}</p>
               <span className="inline-flex aspect-square p-3 bg-black rounded-full shrink-0">
                 <ArrowUpRight size={18} />
               </span>
