@@ -37,29 +37,29 @@ export const Facilities = () => {
     <section className="font-roboto px-3 space-y-9 md:px-7">
       <div className="flex flex-col space-y-6 md:flex-row md:items-center md:justify-between md:space-y-0">
         <div className="flex flex-col space-y-3 md:flex-row md:items-center md:space-x-4 md:space-y-0">
-          <button className="inline-flex w-fit px-5 py-2 border border-gray-300 rounded-3xl text-sm">
+          <button className="inline-flex w-fit px-5 py-2 md:px-6 md:py-3 border border-gray-300 rounded-3xl text-sm">
             Facilities
           </button>
-          <h1 className="text-3xl">Explore Our Facilities</h1>
+          <h1 className="text-3xl md:text-4xl">Explore Our Facilities</h1>
         </div>
 
-        <button className="inline-flex w-fit items-center bg-black/85 text-white px-5 py-3 rounded-3xl gap-2 font-thin text-xs">
+        <button className="inline-flex w-fit items-center bg-black/85 text-white px-5 py-3 rounded-3xl gap-2 font-thin text-xs md:py-4">
           View all <ArrowUpRight size={18} />
         </button>
       </div>
 
-      <div className="flex overflow-x-auto space-x-2 md:justify-start ">
+      <div className="flex overflow-x-auto md:overflow-x-hidden space-x-2 md:space-x-2">
         {facilities.map((item) => (
           <div
             key={item.buttonTxt}
-            className="flex flex-col items-start justify-between border aspect-[3/4.7] w-80 md:w-1/4 shrink-0 px-2 py-3 bg-cover bg-center rounded-2xl text-white"
+            className="flex flex-col items-start justify-between border aspect-[3/4.7] w-80 md:w-1/4 shrink-0 md:shrink px-2 py-3 bg-cover bg-center rounded-2xl text-white"
             style={{ backgroundImage: `url(${item.img})` }}
           >
             <button className="px-3 py-2 border rounded-3xl text-sm">
               {item.buttonTxt}
             </button>
 
-            <div className="flex items-center justify-between bg-white/20 backdrop-blur-sm px-5 py-6 rounded-2xl font-thin text-sm text-white space-x-0">
+            <div className="flex items-center justify-between bg-white/20 backdrop-blur-sm px-5 py-6 rounded-2xl font-thin text-sm text-white space-x-1 md:w-full">
               <p>{item.desc}</p>
               <span className="inline-flex aspect-square p-3 bg-black rounded-full shrink-0">
                 <ArrowUpRight size={18} />
@@ -70,11 +70,11 @@ export const Facilities = () => {
       </div>
 
       <div className="flex flex-col justify-center space-y-3 md:flex-row-reverse md:items-center md:justify-between md:space-y-0">
-        <p className="text-sm font-thin text-right ml-auto max-w-96 md:text-base text-gray-600">
+        <p className="text-sm font-thin text-right ml-auto max-w-2xl md:text-2xl text-gray-600">
           {facilitiesNotes[index]}
         </p>
         <div className="flex items-center justify-end space-x-3">
-          <span className="h-14 w-14 rounded-full border border-gray-300 flex items-center justify-center">
+          <span className="h-14 w-14 md:h-16 md:w-16 rounded-full border border-gray-300 flex items-center justify-center">
             <ArrowLeft
               size={24}
               strokeWidth={1}
@@ -87,7 +87,7 @@ export const Facilities = () => {
               }
             />
           </span>
-          <span className="h-14 w-14 rounded-full border border-gray-300 flex items-center justify-center ">
+          <span className="h-14 w-14 md:h-16 md:w-16 rounded-full border border-gray-300 flex items-center justify-center ">
             <ArrowRight
               size={24}
               strokeWidth={1}
