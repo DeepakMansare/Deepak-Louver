@@ -2,10 +2,10 @@ import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <div className="px-4">
-      <div className="flex flex-col items-center justify-center bg-sky-200 rounded-3xl py-5 font-roboto space-y-18 md:space-y-6 md:px-20">
+    <div className="px-2">
+      <div className="flex flex-col items-center justify-center bg-sky-200 rounded-3xl font-roboto space-y-12 py-1 md:space-y-8 md:px-20 md:py-10 md:max-w-7xl md:mx-auto">
         <div className="flex flex-col space-y-8 md:flex-row md:items-start md:justify-between md:w-full">
-          <div className="flex flex-col items-start justify-center space-y-7 px-3 py-5 md:py-0">
+          <div className="flex flex-col items-start justify-center space-y-4 px-3 py-6 md:py-0">
             <p className="text-4xl md:text-2xl md:max-w-xs">
               Your Play, Your Way- Modern Sports Facilities for Every Passion
             </p>
@@ -14,7 +14,7 @@ export const Footer = () => {
             </button>
           </div>
 
-          <div className="grid grid-cols-2 px-4 max-w-sm mx-auto md:mx-0 md:w-full">
+          <div className="grid grid-cols-2 px-4 md:px-2 max-w-sm mx-auto md:mx-0 md:w-full">
             <div className="space-y-5">
               <h3 className="">Facilities</h3>
               <ul className="text-xs space-y-2">
@@ -29,7 +29,7 @@ export const Footer = () => {
               </ul>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 md:gap-14">
               <div className="space-y-5">
                 <h3>About Us</h3>
                 <ul className="text-xs space-y-2">
@@ -72,7 +72,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="w-full text-xs border-t border-gray-400 flex items-center justify-between px-3 py-3 md:py-6">
+        <div className="w-full text-xs border-t border-gray-400 flex items-center justify-between px-3 py-4 md:py-6">
           <span>Privacy Policy/Terms</span>
           <span>All rights reserved@louver 2024</span>
         </div>
