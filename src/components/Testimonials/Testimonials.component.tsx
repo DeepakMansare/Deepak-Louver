@@ -2,24 +2,28 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 
 export const Testimonials = () => {
   return (
-    <section className="flex flex-col items-center justify-center px-3 py-5 font-roboto bg-gray-50 md:space-y-7 md:py-5">
-      <button className="border border-gray-300 px-2 py-1 rounded-full mt-10">
+    <section className="flex flex-col items-center justify-center px-3 py-5 font-roboto bg-gray-50 md:py-5">
+      <button className="border border-gray-300 px-2 py-1 md:px-3 md:py-2 rounded-full mt-10">
         Testimonial
       </button>
 
-      <h1 className="text-3xl text-center px-2 mt-5">
+      <h1 className="text-3xl text-center px-2 mt-5 md:text-3xl">
         Here is what our Clients are saying about us
       </h1>
 
-      <div className="mt-12 md:flex md:flex-row md:w-full md:items-center justify-center md:max-w-5xl md:space-x-6">
-        <span className="hidden md:flex items-center border h-8 w-8  justify-center rounded-full text-gray-600 md:shadow-xl md:shrink-0">
+      <div className="mt-12 md:flex md:flex-row md:w-full md:items-center justify-center md:max-w-full md:space-x-8 md:mt-6">
+        <span className="hidden md:flex items-center border h-10 w-10  justify-center rounded-full text-gray-600 md:shadow-xl md:shrink-0">
           <ArrowLeft size={18} />
         </span>
 
-        <div className="flex flex-col items-center bg-white/95 rounded-3xl shadow-sm space-y-4 px-4 py-6 md:flex-row md:items-center md:justify-between md:space-x-6">
-          <img src="/Testimonialimg.png" alt="image" className="h-36 w-36" />
+        <div className="flex flex-col items-center bg-white/95 rounded-3xl shadow-sm space-y-4 px-4 py-4 md:px-6 md:py-12 md:flex-row md:items-stretch md:gap-5">
+          <img
+            src="/Testimonialimg.png"
+            alt="image"
+            className="h-42 w-42 md:m-auto"
+          />
 
-          <div className="flex flex-col justify-between space-y-4 md:max-w-2xl">
+          <div className="flex flex-col justify-between space-y-2 md:max-w-xl">
             <h2 className="text-xl font-semibold w-full text-left">
               Hannah Schmitt
             </h2>
@@ -38,7 +42,7 @@ export const Testimonials = () => {
           </div>
         </div>
 
-        <span className="hidden md:flex items-center border h-8 w-8  justify-center rounded-full text-gray-600 md:shadow-xl md:shrink-0">
+        <span className="hidden md:flex items-center border h-10 w-10  justify-center rounded-full text-gray-600 md:shadow-xl md:shrink-0">
           <ArrowRight size={18} />
         </span>
       </div>
