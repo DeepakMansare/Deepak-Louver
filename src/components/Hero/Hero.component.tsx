@@ -49,11 +49,11 @@ export const Hero = ({
         </div>
       </div>
 
-      <div className="inline-flex self-start px-3 py-2 border text-sm rounded-full mt-12 md:-mt-1 md:py-3">
-        <button>Sport Center</button>
+      <div className="inline-flex self-start md:ml-6 px-3 py-2 md:px-7 md:py-4 border text-sm rounded-full mt-12 md:-mt-16">
+        <button className="">Sport Center</button>
       </div>
 
-      <h1 className="text-3xl leading-normal mt-3 md:text-5xl md:leading-tight md:font-light">
+      <h1 className="text-3xl leading-normal mt-3 md:text-5xl md:leading-tight md:font-light md:pl-6">
         <span className="block">Your Play, Your Way-</span>
         <span className="block">Modern Sports Facilities</span>
         <span className="block">for Every Passion</span>
