@@ -2,21 +2,21 @@ import { ArrowUpRight } from "lucide-react";
 
 export const OtherFeatures = () => {
   return (
-    <section className="flex px-16">
+    <section className="flex md:px-16">
       <div className="flex flex-col items-center justify-around space-y-4 md:flex-row">
-        <div className="flex flex-col items-start justify-around space-y-6 md:w-2/5 md:h-full">
-          <div className="flex text-sm items-start justify-center space-x-3">
-            <button className="border px-4 py-3 rounded-full shrink-0">
+        <div className="flex flex-col px-4 items-start justify-around space-y-6 md:w-2/5 md:h-full">
+          <div className="flex flex-nowrap text-sm items-start justify-center gap-3">
+            <button className="border px-3 py-2 md:px-4 md:py-3 rounded-full">
               Competition
             </button>
-            <button className="border px-4 py-3 rounded-full shrink-0">
+            <button className="border px-3 py-2 md:px-4 md:py-3 rounded-full">
               Training
             </button>
-            <button className="border px-4 py-3 rounded-full shrink-0">
+            <button className="border px-3 py-2 md:px-4 md:py-3 rounded-full">
               Friendly Match
             </button>
           </div>
-          <div className="text-3xl md:text-6xl font-thin md:max-w-lg">
+          <div className="text-4xl leading-snug md:text-6xl font-thin md:max-w-lg">
             <p>Experience the best in Courts, Fields, and More</p>
           </div>
           <div className="text-sm md:max-w-80">
@@ -26,22 +26,22 @@ export const OtherFeatures = () => {
               cater to both casual player and competitive athletes.
             </p>
           </div>
-          <div className="flex text-xs items-center justify-around border px-5 py-3 rounded-full space-x-2 bg-black text-white">
+          <div className="flex text-xs items-center justify-around border px-3 py-2 md:px-5 md:py-3 rounded-full space-x-2 bg-black text-white">
             <button>Book now</button>
             <ArrowUpRight size={16} />
           </div>
         </div>
 
-        <div className="md:w-4/7 md:h-full">
+        <div className="md:w-3/5 md:h-full pr-3">
           <img
             src="./OtherFeatureImg1.png"
             alt=""
-            className="md:block hidden object-cover"
+            className="md:block hidden w-full h-full object-cover"
           />
           <img
             src="./OtherFeatureImg2.png"
             alt=""
-            className="md:hidden block"
+            className="md:hidden block h-full w-full"
           />
         </div>
       </div>
