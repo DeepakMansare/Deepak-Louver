@@ -1,11 +1,7 @@
 import { Search, Menu, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 
-const navItems: { label: string; target: string }[] = [
-  { label: "About Us", target: "about" },
-  { label: "Facilities", target: "facilities" },
-  { label: "Membership", target: "membership" },
-];
+import { navItems } from "@mockdata";
 
 export const Navbar = ({
   search,
@@ -26,16 +22,16 @@ export const Navbar = ({
   };
 
   return (
-    <nav className="relative w-full flex items-center justify-between py-6">
+    <nav className="relative w-full flex items-center justify-between py-6 md:px-4 md:py-10">
       <div className="flex items-center gap-2 text-xl tracking-widest font-hind">
         <span className="font-semibold">LOUVER</span>
         <span>SPORT</span>
       </div>
 
       <div className="flex items-center gap-4 ml-auto md:w-full">
-        <div className="hidden md:flex items-center gap-4 w-full ml-auto justify-end font-light">
-          <div className="flex items-center justify-between backdrop-blur-sm px-4 py-5 rounded-full flex-1 w-full max-w-sm">
-            <ul className="flex items-center gap-8 text-sm whitespace-nowrap mx-auto">
+        <div className="hidden md:flex md:flex-wrap items-center gap-4 w-full ml-auto justify-end font-light md:pr-4">
+          <div className="flex items-center justify-between backdrop-blur-sm px-4 py-5 md:px-8 md:py-6 rounded-full flex-1 w-full max-w-sm md:max-w-md">
+            <ul className="flex items-center gap-16 text-sm md:text-base whitespace-nowrap mx-auto">
               {navItems.map((item) => (
                 <li
                   key={item.target}
@@ -48,12 +44,12 @@ export const Navbar = ({
             </ul>
           </div>
 
-          <div className="flex items-center justify-between backdrop-blur-sm px-3 py-2 rounded-full border flex-1 w-full max-w-52">
+          <div className="flex items-center justify-between backdrop-blur-sm px-3 py-2 md:py-4 rounded-full border flex-1 w-full max-w-52 md:max-w-60">
             <input
               type="text"
               placeholder="Search here..."
               value={search}
-              className="bg-transparent text-xs outline-none w-full"
+              className="bg-transparent text-xs md:text-sm outline-none w-full"
               onChange={(e) => setSearch(e.target.value)}
             />
             <div
@@ -65,7 +61,7 @@ export const Navbar = ({
           </div>
 
           <button
-            className="px-4 py-6 text-sm rounded-full bg-gray-800 whitespace-nowrap flex items-center gap-1 md:px-3 md:py-4 cursor-pointer"
+            className="px-4 py-6 text-sm rounded-full bg-gray-800 whitespace-nowrap flex items-center gap-1 md:px-10 md:py-6 cursor-pointer"
             onClick={() => handleScroll("membership")}
           >
             Book now
