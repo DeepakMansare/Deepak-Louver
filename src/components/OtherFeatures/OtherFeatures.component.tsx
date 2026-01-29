@@ -2,9 +2,9 @@ import { ArrowUpRight } from "lucide-react";
 
 export const OtherFeatures = () => {
   return (
-    <section className="flex md:px-16">
+    <section className="flex md:px-8 font-roboto">
       <div className="flex flex-col items-center justify-around space-y-4 md:flex-row">
-        <div className="flex flex-col px-4 items-start justify-around space-y-6 md:w-2/5 md:h-full">
+        <div className="flex flex-col px-4 items-start justify-around space-y-6 md:w-2/5 md:h-full md:space-y-0">
           <div className="flex flex-nowrap text-sm items-start justify-center gap-3">
             <button className="border px-3 py-2 md:px-4 md:py-3 rounded-full">
               Competition
@@ -16,7 +16,7 @@ export const OtherFeatures = () => {
               Friendly Match
             </button>
           </div>
-          <div className="text-4xl leading-snug md:text-6xl font-thin md:max-w-lg">
+          <div className="text-4xl leading-snug md:text-6xl font-thin md:max-w-xl">
             <p>Experience the best in Courts, Fields, and More</p>
           </div>
           <div className="text-sm md:max-w-80">
@@ -32,16 +32,13 @@ export const OtherFeatures = () => {
           </div>
         </div>
 
-        <div className="md:w-3/5 md:h-full pr-3">
+        <div className="w-full h-112 p-4 relative md:w-3/5 md:h-full">
+          <div className="absolute inset-5 rounded-3xl bg-blue-200 blur-xs -translate-x-6 -translate-y-6"></div>
+
           <img
-            src="./OtherFeatureImg1.png"
-            alt=""
-            className="md:block hidden w-full h-full object-cover"
-          />
-          <img
-            src="./OtherFeatureImg2.png"
-            alt=""
-            className="md:hidden block h-full w-full"
+            src="./OtherFeatureImg.jpg"
+            alt="OtherFeatureImg"
+            className="relative h-full w-full rounded-3xl object-cover"
           />
         </div>
       </div>
