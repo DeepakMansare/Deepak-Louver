@@ -3,27 +3,27 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 export const Testimonials = () => {
   return (
     <section className="flex flex-col items-center justify-center px-3 py-5 font-roboto bg-gray-50 md:py-5">
-      <button className="border border-gray-300 px-2 py-1 md:px-3 md:py-2 rounded-full mt-10">
+      <button className="border border-gray-300 px-2 py-1 md:px-4 md:py-2 rounded-full mt-10">
         Testimonial
       </button>
 
-      <h1 className="text-3xl text-center px-2 mt-5 md:text-3xl">
+      <h1 className="text-3xl text-center px-2 mt-5 md:text-4xl">
         Here is what our Clients are saying about us
       </h1>
 
-      <div className="mt-12 md:flex md:flex-row md:w-full md:items-center justify-center md:max-w-full md:space-x-8 md:mt-6">
-        <span className="hidden md:flex items-center border h-10 w-10  justify-center rounded-full text-gray-600 md:shadow-xl md:shrink-0">
+      <div className="mt-12 md:flex md:flex-row md:w-full md:items-center justify-center md:max-w-full md:space-x-12 md:mt-7">
+        <span className="hidden md:flex items-center h-10 w-10 bg-white justify-center rounded-full text-gray-600 md:shadow-xl md:shrink-0">
           <ArrowLeft size={18} />
         </span>
 
-        <div className="flex flex-col items-center bg-white/95 rounded-3xl shadow-sm space-y-4 px-4 py-4 md:px-6 md:py-12 md:flex-row md:items-stretch md:gap-5">
+        <div className="flex flex-col items-center bg-white/95 rounded-3xl shadow-sm space-y-4 px-4 py-4 md:px-6 md:py-12 md:flex-row md:items-stretch md:gap-5 md:h-72">
           <img
             src="/Testimonialimg.png"
             alt="image"
-            className="h-42 w-42 md:m-auto"
+            className="h-42 w-42 md:h-46 md:w-46 md:m-auto"
           />
 
-          <div className="flex flex-col justify-between space-y-2 md:max-w-xl">
+          <div className="flex flex-col justify-between space-y-2 md:gap-1 md:justify-start md:max-w-xl">
             <h2 className="text-xl font-semibold w-full text-left">
               Hannah Schmitt
             </h2>
@@ -42,7 +42,7 @@ export const Testimonials = () => {
           </div>
         </div>
 
-        <span className="hidden md:flex items-center border h-10 w-10  justify-center rounded-full text-gray-600 md:shadow-xl md:shrink-0">
+        <span className="hidden md:flex items-center bg-white h-10 w-10  justify-center rounded-full text-gray-600 md:shadow-xl md:shrink-0">
           <ArrowRight size={18} />
         </span>
       </div>
