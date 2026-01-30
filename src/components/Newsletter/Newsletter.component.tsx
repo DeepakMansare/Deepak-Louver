@@ -7,8 +7,8 @@ export const Newsletter = () => {
   const [email, setEmail] = useState("");
 
   return (
-    <section className="px-2 py-4 md:px-16 md:py-14">
-      <div className="flex flex-col bg-gray-900 rounded-3xl p-4 text-white font-roboto space-y-14 md:space-y-4 md:space-x-0 md:grid md:grid-cols-3 md:gap-8">
+    <section className="px-2 py-4 md:px-10 md:py-10">
+      <div className="flex flex-col bg-gray-900 rounded-3xl p-4 text-white font-roboto space-y-14 md:space-y-4 md:space-x-0 md:grid md:grid-cols-3 md:gap-8 md:w-full">
         <div className="w-full h-full">
           <img
             src={NewsletterImg}
@@ -18,11 +18,11 @@ export const Newsletter = () => {
         </div>
 
         <div className="flex flex-col justify-between w-full space-y-8 md:col-span-2 md:justify-around md:space-y-2">
-          <div className="flex items-start space-x-4">
-            <button className="border border-white/40 rounded-3xl px-4 py-3">
+          <div className="flex items-start space-x-3">
+            <button className="border border-white/40 rounded-full px-4 py-3 md:px-6">
               Membership
             </button>
-            <button className="bg-white text-black rounded-3xl px-6 py-3">
+            <button className="bg-white text-black rounded-full px-6 py-3 md:px-7 md:py-4">
               Newsletter
             </button>
           </div>
